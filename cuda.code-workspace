@@ -1,0 +1,8 @@
+{
+    "folders": [
+      { "name": "root",  "path": "." },
+      { "name": "Chap2", "path": "Chap2" },
+      { "name": "Chap3", "path": "Chap3" }
+    ],
+    "settings": {}
+}

@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run CUDA exe (Chap2)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder:root}/output/Chap2/hello.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "preLaunchTask": "Build with NVCC (Chap2)"
+    }
+  ]
+}

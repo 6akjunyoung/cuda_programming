@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Prep: make output dir (Chap2)",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "if not exist \"${workspaceFolder:root}\\output\\Chap2\" mkdir \"${workspaceFolder:root}\\output\\Chap2\""
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build with NVCC (Chap2)",
+      "type": "shell",
+      "command": "nvcc",
+      "args": [
+        "${workspaceFolder}/main.cu",
+        "-o", "${workspaceFolder:root}/output/Chap2/hello.exe",
+        "-Xcompiler", "/utf-8"
+      ],
+      "dependsOn": "Prep: make output dir (Chap2)",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$msCompile"],
+      "group": { "kind": "build", "isDefault": true },
+      "detail": "NVCC로 Chap2/main.cu → root/output/Chap2/hello.exe"
+    }
+  ]
+}
